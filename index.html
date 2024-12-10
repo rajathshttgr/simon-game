@@ -7,19 +7,50 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Simon Game</title>
   </head>
+
   <body>
-    <div class="textDisplay">
-      <p id="message">Press a Key to Start</p>
+    <div class="container text-center my-5">
+      <p id="message" class="textDisplay">Press a Key to Start</p>
     </div>
-    <div class="container">
-      <div class="gameBoard">
-        <button class="green" onclick="userInput('green')"></button>
-        <button class="red" onclick="userInput('red')"></button>
-        <button class="yellow" onclick="userInput('yellow')"></button>
-        <button class="blue" onclick="userInput('blue')"></button>
+    <div
+      class="container d-flex justify-content-center align-items-center"
+      style="height: 60vh"
+    >
+      <div
+        class="d-grid gap-4"
+        style="
+          grid-template-columns: repeat(2, 1fr);
+          width: 320px;
+          height: 320px;
+        "
+      >
+        <button
+          class="btn game-btn bg-success"
+          onclick="userInput('green')"
+          id="green"
+        ></button>
+        <button
+          class="btn game-btn bg-danger"
+          onclick="userInput('red')"
+          id="red"
+        ></button>
+        <button
+          class="btn game-btn bg-warning"
+          onclick="userInput('yellow')"
+          id="yellow"
+        ></button>
+        <button
+          class="btn game-btn bg-primary"
+          onclick="userInput('blue')"
+          id="blue"
+        ></button>
       </div>
     </div>
     <script src="script.js"></script>
